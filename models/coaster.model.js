@@ -1,6 +1,18 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const coasterSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    inversions: Number,
+    length: Number,
+    active: Boolean,
+    park:
+        [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Park'
+        }]
+})
 
 // Aquí el esquema
 
-module.exports = mongoose.model('Coaster', coasterSchema)
+const Coaster = mongoose.model('Coaster', coasterSchema)
+module.exports = Coaster

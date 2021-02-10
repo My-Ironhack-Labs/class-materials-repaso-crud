@@ -1,6 +1,12 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const parkSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    active: Boolean,
+})
 
 // Aquí el esquema
 
-module.exports = mongoose.model('Park', parkSchema)
+const Park = mongoose.model('Park', parkSchema)
+
+module.exports = Park
