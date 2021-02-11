@@ -15,4 +15,10 @@ h1, h2, h3 {
 .coasters-index .btn {
   float: right; }
 
+.delete-section{
+  width: 20%;
+  margin-right: 0px;
+  display: flex;
+  justify-content: space-between;
+}
 /*# sourceMappingURL=style.css.map */
